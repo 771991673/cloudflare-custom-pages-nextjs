@@ -22,7 +22,7 @@ const devConfig = {
 const prodConfig = {
   ...baseConfig,
   // 生产环境使用 export mode
-  output: "export",
+  // output: "export",
   productionBrowserSourceMaps: false,
 
   webpack: (config, { isServer }) => {
