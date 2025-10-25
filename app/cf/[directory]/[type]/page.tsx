@@ -22,7 +22,7 @@ export async function generateStaticParams({
 }
 
 export default async function DynamicPage({ params }: DynamicPageProps) {
-  const { directory: pageType, type } = params;
+  const { directory: pageType, type } = await params;
 
   if (!directories.includes(pageType)) {
     notFound();

@@ -32,21 +32,20 @@ export const ThemeSwitch: FC<ThemeSwitchProps> = ({
   const currentTheme = theme || systemTheme;
 
   const onChange = () => {
-    currentTheme === "light" ? setTheme("dark") : setTheme("light");
+    console.log("Current theme:", currentTheme);
+    const newTheme = currentTheme === "light" ? "dark" : "light";
+    setTheme(newTheme);
+    console.log("New theme:", newTheme);
   };
 
-  const {
-    Component,
-    slots,
-    isSelected,
-    getBaseProps,
-    getInputProps,
-    getWrapperProps,
-  } = useSwitch({
-    isSelected: currentTheme === "light" || isSSR,
-    "aria-label": `Switch to ${currentTheme === "light" || isSSR ? "dark" : "light"} mode`,
-    onChange,
-  });
+  const { Component, slots, isSelected, getBaseProps, getInputProps, getWrapperProps } =
+      useSwitch({
+        isSelected: currentTheme === "light" || isSSR,
+        "aria-label": `Switch to ${currentTheme === "light" || isSSR ? "dark" : "light"} mode`,
+        onChange,
+      });
+
+  console.log("isSelected:", isSelected);
 
   // Prevent hydration mismatch
   if (!mounted || isSSR) {

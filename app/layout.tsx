@@ -26,7 +26,13 @@ export default function RootLayout({
         {/* Additional head tags if needed (Cloudflare Pages Custom Error Pages) */}
       </head>
       <body className="min-h-screen bg-background font-sans antialiased">
-        <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
+        <Providers
+            themeProps={{
+                attribute: "class",
+                defaultTheme: "system",
+                enableSystem: true,
+            }}
+        >
           {children}
         </Providers>
       </body>
