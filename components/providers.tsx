@@ -20,13 +20,13 @@ export function Providers({ children, themeProps }: ProvidersProps) {
 
   return (
     <HeroUIProvider navigate={(path) => router.push(path)}>
-        <NextThemesProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            storageKey="theme"
-            {...themeProps}
-        >
+      <NextThemesProvider
+        attribute="class"
+        defaultTheme="system"
+        enableSystem
+        storageKey="theme"
+        {...themeProps}
+      >
         <main className="antialiased">{children}</main>
       </NextThemesProvider>
     </HeroUIProvider>

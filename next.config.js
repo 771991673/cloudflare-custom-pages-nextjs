@@ -23,8 +23,8 @@ const prodConfig = {
   ...baseConfig,
   // 生产环境使用 export mode
   // output: "export",
-  output: 'standalone',
-
+  output: "standalone",
+  distDir: 'out',
   productionBrowserSourceMaps: false,
   serverRuntimeConfig: {
     runtime: process.env.RUNTIME,

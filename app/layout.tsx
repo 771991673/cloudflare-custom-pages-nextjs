@@ -27,11 +27,11 @@ export default function RootLayout({
       </head>
       <body className="min-h-screen bg-background font-sans antialiased">
         <Providers
-            themeProps={{
-                attribute: "class",
-                defaultTheme: "system",
-                enableSystem: true,
-            }}
+          themeProps={{
+            attribute: "class",
+            defaultTheme: "system",
+            enableSystem: true,
+          }}
         >
           {children}
         </Providers>

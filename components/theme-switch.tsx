@@ -38,12 +38,18 @@ export const ThemeSwitch: FC<ThemeSwitchProps> = ({
     console.log("New theme:", newTheme);
   };
 
-  const { Component, slots, isSelected, getBaseProps, getInputProps, getWrapperProps } =
-      useSwitch({
-        isSelected: currentTheme === "light" || isSSR,
-        "aria-label": `Switch to ${currentTheme === "light" || isSSR ? "dark" : "light"} mode`,
-        onChange,
-      });
+  const {
+    Component,
+    slots,
+    isSelected,
+    getBaseProps,
+    getInputProps,
+    getWrapperProps,
+  } = useSwitch({
+    isSelected: currentTheme === "light" || isSSR,
+    "aria-label": `Switch to ${currentTheme === "light" || isSSR ? "dark" : "light"} mode`,
+    onChange,
+  });
 
   console.log("isSelected:", isSelected);
 
