@@ -57,3 +57,4 @@ old/
 bun.lock
 *.md
 !README*
+/.idea

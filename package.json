@@ -20,8 +20,8 @@
     "prestart": "bun run build",
     "start": "bun x serve out -p 3001",
     "format-lint": "bun run format && bun run lint",
-    "format": "bunx biome format --fix --write pages config components scripts types utils tsconfig.json tailwind.config.js postcss.config.js package.json next.config.js",
-    "lint": "bunx biome check --write pages config components scripts types utils tsconfig.json tailwind.config.js postcss.config.js package.json next.config.js"
+    "format": "bunx biome format --fix --write app config components scripts types utils tsconfig.json tailwind.config.js postcss.config.js package.json next.config.js",
+    "lint": "bunx biome check --write app config components scripts types utils tsconfig.json tailwind.config.js postcss.config.js package.json next.config.js"
   },
   "dependencies": {
     "@heroui/button": "^2.2.21",
@@ -62,6 +62,7 @@
     "@typescript-eslint/parser": "8.11.0",
     "autoprefixer": "10.4.19",
     "cheerio": "^1.1.0",
+    "daisyui": "^5.3.9",
     "eslint": "^8.57.1",
     "eslint-config-next": "15.0.4",
     "eslint-config-prettier": "9.1.0",
@@ -78,5 +79,6 @@
     "tailwind-variants": "0.1.20",
     "tailwindcss": "^4.1.16",
     "typescript": "5.6.3"
-  }
+  },
+  "browserslist": "> 1%"
 }

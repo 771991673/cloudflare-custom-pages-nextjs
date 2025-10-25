@@ -1,11 +1,14 @@
-"use client";
+"use client"; // Required for useRouter and next-themes
 
 import { HeroUIProvider } from "@heroui/react";
-import type { ThemeProviderProps } from "next-themes";
 import { ThemeProvider as NextThemesProvider } from "next-themes";
-import { useRouter } from "next/router";
+import type { ThemeProviderProps } from "next-themes";
+import { useRouter } from "next/navigation"; // Correct import for App Router
 import type { ReactNode } from "react";
-// import { fontSans, fontMono } from '@/config/fonts';
+
+// Optional: Uncomment and use next/font for optimized fonts
+// import { Inter } from 'next/font/google';
+// const inter = Inter({ subsets: ['latin'] });
 
 export interface ProvidersProps {
   children: ReactNode;
@@ -18,7 +21,7 @@ export function Providers({ children, themeProps }: ProvidersProps) {
   return (
     <HeroUIProvider navigate={(path) => router.push(path)}>
       <NextThemesProvider {...themeProps}>
-        <main className={"antialiased"}>{children}</main>
+        <main className="antialiased">{children}</main>
       </NextThemesProvider>
     </HeroUIProvider>
   );
