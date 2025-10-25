@@ -23,8 +23,12 @@ const prodConfig = {
   ...baseConfig,
   // 生产环境使用 export mode
   // output: "export",
-  productionBrowserSourceMaps: false,
+  output: 'standalone',
 
+  productionBrowserSourceMaps: false,
+  serverRuntimeConfig: {
+    runtime: process.env.RUNTIME,
+  },
   webpack: (config, { isServer }) => {
     if (!isServer) {
       // 优化分包策略
