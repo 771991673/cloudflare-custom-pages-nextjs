@@ -31,3 +31,5 @@ export async function GET() {
         return NextResponse.json(errorResponse, { status: 500 });
     }
 }
+
+export const runtime = 'edge';
